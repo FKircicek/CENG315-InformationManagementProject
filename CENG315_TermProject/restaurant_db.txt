@@ -1,0 +1,531 @@
+DROP TABLE manager;
+DROP TABLE chef;
+DROP TABLE waiter;
+DROP TABLE cashier;
+DROP TABLE courier;
+DROP TABLE dining_table;
+DROP TABLE customer;
+DROP TABLE reservation;
+DROP TABLE orders;
+DROP TABLE order_item;
+DROP TABLE prepared_by;
+DROP TABLE delivers;
+DROP TABLE bill;
+DROP TABLE food_supplier;
+DROP TABLE trades;
+
+CREATE TABLE manager(
+    manager_id NUMBER(4) NOT NULL,
+    manager_first_name VARCHAR2(50) NOT NULL,
+    manager_middle_name VARCHAR2(50),
+    manager_last_name VARCHAR2(50) NOT NULL,
+    phone_number NUMBER(10),
+    hiredate DATE,
+    salary NUMBER NOT NULL,
+    annual_holiday NUMBER NOT NULL,
+    
+    PRIMARY KEY (manager_id)
+);
+
+INSERT INTO manager(manager_id,manager_first_name,manager_middle_name,manager_last_name,phone_number,hiredate,salary,annual_holiday) VALUES(1243,'','','',5556312451,TO_DATE(),5234,30);
+INSERT INTO manager(manager_id,manager_first_name,manager_middle_name,manager_last_name,phone_number,hiredate,salary,annual_holiday) VALUES(1214,'','','',5554456452,TO_DATE(),5356,25);
+INSERT INTO manager(manager_id,manager_first_name,manager_middle_name,manager_last_name,phone_number,hiredate,salary,annual_holiday) VALUES(1189,'','','',5552326782,TO_DATE(),5781,25);
+INSERT INTO manager(manager_id,manager_first_name,manager_middle_name,manager_last_name,phone_number,hiredate,salary,annual_holiday) VALUES(1172,'','','',5551218293,TO_DATE(),5211,30);
+INSERT INTO manager(manager_id,manager_first_name,manager_middle_name,manager_last_name,phone_number,hiredate,salary,annual_holiday) VALUES(1342,'','','',5555648986,TO_DATE(),5811,25);
+INSERT INTO manager(manager_id,manager_first_name,manager_middle_name,manager_last_name,phone_number,hiredate,salary,annual_holiday) VALUES(1332,'','','',5526342321,TO_DATE();5211,30);
+INSERT INTO manager(manager_id,manager_first_name,manager_middle_name,manager_last_name,phone_number,hiredate,salary,annual_holiday) VALUES(1435,'','','',5523451426,TO_DATE(),4985,25);
+INSERT INTO manager(manager_id,manager_first_name,manager_middle_name,manager_last_name,phone_number,hiredate,salary,annual_holiday) VALUES(1487,'','','',5526671235,TO_DATE(),4852,25);
+INSERT INTO manager(manager_id,manager_first_name,manager_middle_name,manager_last_name,phone_number,hiredate,salary,annual_holiday) VALUES(1277,'','','',5527784537,TO_DATE(),4775,30);
+INSERT INTO manager(manager_id,manager_first_name,manager_middle_name,manager_last_name,phone_number,hiredate,salary,annual_holiday) VALUES(1325,'','','',5534677865,TO_DATE(),4556,25);
+INSERT INTO manager(manager_id,manager_first_name,manager_middle_name,manager_last_name,phone_number,hiredate,salary,annual_holiday) VALUES(1543,'','','',5536554243,TO_DATE(),4665,25);
+INSERT INTO manager(manager_id,manager_first_name,manager_middle_name,manager_last_name,phone_number,hiredate,salary,annual_holiday) VALUES(1876,'','','',5537789997,TO_DATE(),4887,30);
+INSERT INTO manager(manager_id,manager_first_name,manager_middle_name,manager_last_name,phone_number,hiredate,salary,annual_holiday) VALUES(1765,'','','',5536891243,TO_DATE(),4956,25);
+INSERT INTO manager(manager_id,manager_first_name,manager_middle_name,manager_last_name,phone_number,hiredate,salary,annual_holiday) VALUES(1554,'','','',5547568877,TO_DATE(),4925,30);
+INSERT INTO manager(manager_id,manager_first_name,manager_middle_name,manager_last_name,phone_number,hiredate,salary,annual_holiday) VALUES(1672,'','','',5547736544,TO_DATE(),5121,30);
+INSERT INTO manager(manager_id,manager_first_name,manager_middle_name,manager_last_name,phone_number,hiredate,salary,annual_holiday) VALUES(1821,'','','',5548823465,TO_DATE(),5243,25);
+INSERT INTO manager(manager_id,manager_first_name,manager_middle_name,manager_last_name,phone_number,hiredate,salary,annual_holiday) VALUES(1123,'','','',5544563266,TO_DATE(),4987,25);
+INSERT INTO manager(manager_id,manager_first_name,manager_middle_name,manager_last_name,phone_number,hiredate,salary,annual_holiday) VALUES(1095,'','','',5567889123,TO_DATE(),5231,30);
+INSERT INTO manager(manager_id,manager_first_name,manager_middle_name,manager_last_name,phone_number,hiredate,salary,annual_holiday) VALUES(1073,'','','',5564532144,TO_DATE(),5341,30);
+INSERT INTO manager(manager_id,manager_first_name,manager_middle_name,manager_last_name,phone_number,hiredate,salary,annual_holiday) VALUES(1032,'','','',5567812365,TO_DATE(),4867,25);
+
+CREATE TABLE chef(
+    chef_id NUMBER(4) NOT NULL,
+    chef_first_name VARCHAR2(50) NOT NULL,
+    chef_middle_name VARCHAR2(50),
+    chef_last_name VARCHAR2(50) NOT NULL,
+    profession VARCHAR2(20),
+    ranking VARCHAR2(20),
+    phone_number NUMBER(10),
+    shift VARCHAR2(30),
+    hiredate DATE,
+    salary NUMBER NOT NULL,
+    annual_holiday NUMBER NOT NULL,
+    experience NUMBER,
+    manager_id(4) NUMBER,
+    
+    PRIMARY KEY (chef_id),
+    FOREIGN KEY (manager_id) REFERENCES manager(manager_id)
+);
+
+INSERT INTO chef(chef_id,chef_first_name,chef_middle_name,chef_last_name,profession,ranking,phone_number,shift,hiredate,salary,annual_holiday,experience,manager_id) VALUES(2543,'','','','','',5671334578,'',TO_DATE(),3876,);
+INSERT INTO chef(chef_id,chef_first_name,chef_middle_name,chef_last_name,profession,ranking,phone_number,shift,hiredate,salary,annual_holiday,experience,manager_id) VALUES();
+INSERT INTO chef(chef_id,chef_first_name,chef_middle_name,chef_last_name,profession,ranking,phone_number,shift,hiredate,salary,annual_holiday,experience,manager_id) VALUES();
+INSERT INTO chef(chef_id,chef_first_name,chef_middle_name,chef_last_name,profession,ranking,phone_number,shift,hiredate,salary,annual_holiday,experience,manager_id) VALUES();
+INSERT INTO chef(chef_id,chef_first_name,chef_middle_name,chef_last_name,profession,ranking,phone_number,shift,hiredate,salary,annual_holiday,experience,manager_id) VALUES();
+INSERT INTO chef(chef_id,chef_first_name,chef_middle_name,chef_last_name,profession,ranking,phone_number,shift,hiredate,salary,annual_holiday,experience,manager_id) VALUES();
+INSERT INTO chef(chef_id,chef_first_name,chef_middle_name,chef_last_name,profession,ranking,phone_number,shift,hiredate,salary,annual_holiday,experience,manager_id) VALUES();
+INSERT INTO chef(chef_id,chef_first_name,chef_middle_name,chef_last_name,profession,ranking,phone_number,shift,hiredate,salary,annual_holiday,experience,manager_id) VALUES();
+INSERT INTO chef(chef_id,chef_first_name,chef_middle_name,chef_last_name,profession,ranking,phone_number,shift,hiredate,salary,annual_holiday,experience,manager_id) VALUES();
+INSERT INTO chef(chef_id,chef_first_name,chef_middle_name,chef_last_name,profession,ranking,phone_number,shift,hiredate,salary,annual_holiday,experience,manager_id) VALUES();
+INSERT INTO chef(chef_id,chef_first_name,chef_middle_name,chef_last_name,profession,ranking,phone_number,shift,hiredate,salary,annual_holiday,experience,manager_id) VALUES();
+INSERT INTO chef(chef_id,chef_first_name,chef_middle_name,chef_last_name,profession,ranking,phone_number,shift,hiredate,salary,annual_holiday,experience,manager_id) VALUES();
+INSERT INTO chef(chef_id,chef_first_name,chef_middle_name,chef_last_name,profession,ranking,phone_number,shift,hiredate,salary,annual_holiday,experience,manager_id) VALUES();
+INSERT INTO chef(chef_id,chef_first_name,chef_middle_name,chef_last_name,profession,ranking,phone_number,shift,hiredate,salary,annual_holiday,experience,manager_id) VALUES();
+INSERT INTO chef(chef_id,chef_first_name,chef_middle_name,chef_last_name,profession,ranking,phone_number,shift,hiredate,salary,annual_holiday,experience,manager_id) VALUES();
+INSERT INTO chef(chef_id,chef_first_name,chef_middle_name,chef_last_name,profession,ranking,phone_number,shift,hiredate,salary,annual_holiday,experience,manager_id) VALUES();
+INSERT INTO chef(chef_id,chef_first_name,chef_middle_name,chef_last_name,profession,ranking,phone_number,shift,hiredate,salary,annual_holiday,experience,manager_id) VALUES();
+INSERT INTO chef(chef_id,chef_first_name,chef_middle_name,chef_last_name,profession,ranking,phone_number,shift,hiredate,salary,annual_holiday,experience,manager_id) VALUES();
+INSERT INTO chef(chef_id,chef_first_name,chef_middle_name,chef_last_name,profession,ranking,phone_number,shift,hiredate,salary,annual_holiday,experience,manager_id) VALUES();
+INSERT INTO chef(chef_id,chef_first_name,chef_middle_name,chef_last_name,profession,ranking,phone_number,shift,hiredate,salary,annual_holiday,experience,manager_id) VALUES();
+
+
+CREATE TABLE waiter(
+    waiter_id NUMBER(4) NOT NULL,
+    waiter_first_name VARCHAR2(50) NOT NULL,
+    waiter_middle_name VARCHAR2(50),
+    waiter_last_name VARCHAR2(50) NOT NULL,
+    phone_number NUMBER(10),
+    shift VARCHAR2(30),
+    hiredate DATE,
+    salary NUMBER NOT NULL,
+    annual_holiday NUMBER NOT NULL,
+    experience NUMBER,
+    manager_id NUMBER(4),
+    
+    PRIMARY KEY (waiter_id),
+    FOREIGN KEY manager_id REFERENCES manager(manager_id)
+);
+
+INSERT INTO waiter(waiter_id,waiter_first_name,waiter_middle_name,waiter_last_name,phone_number,shift,hiredate,salary,annual_holiday,experience,manager_id) VALUES();
+INSERT INTO waiter(waiter_id,waiter_first_name,waiter_middle_name,waiter_last_name,phone_number,shift,hiredate,salary,annual_holiday,experience,manager_id) VALUES();
+INSERT INTO waiter(waiter_id,waiter_first_name,waiter_middle_name,waiter_last_name,phone_number,shift,hiredate,salary,annual_holiday,experience,manager_id) VALUES();
+INSERT INTO waiter(waiter_id,waiter_first_name,waiter_middle_name,waiter_last_name,phone_number,shift,hiredate,salary,annual_holiday,experience,manager_id) VALUES();
+INSERT INTO waiter(waiter_id,waiter_first_name,waiter_middle_name,waiter_last_name,phone_number,shift,hiredate,salary,annual_holiday,experience,manager_id) VALUES();
+INSERT INTO waiter(waiter_id,waiter_first_name,waiter_middle_name,waiter_last_name,phone_number,shift,hiredate,salary,annual_holiday,experience,manager_id) VALUES();
+INSERT INTO waiter(waiter_id,waiter_first_name,waiter_middle_name,waiter_last_name,phone_number,shift,hiredate,salary,annual_holiday,experience,manager_id) VALUES();
+INSERT INTO waiter(waiter_id,waiter_first_name,waiter_middle_name,waiter_last_name,phone_number,shift,hiredate,salary,annual_holiday,experience,manager_id) VALUES();
+INSERT INTO waiter(waiter_id,waiter_first_name,waiter_middle_name,waiter_last_name,phone_number,shift,hiredate,salary,annual_holiday,experience,manager_id) VALUES();
+INSERT INTO waiter(waiter_id,waiter_first_name,waiter_middle_name,waiter_last_name,phone_number,shift,hiredate,salary,annual_holiday,experience,manager_id) VALUES();
+INSERT INTO waiter(waiter_id,waiter_first_name,waiter_middle_name,waiter_last_name,phone_number,shift,hiredate,salary,annual_holiday,experience,manager_id) VALUES();
+INSERT INTO waiter(waiter_id,waiter_first_name,waiter_middle_name,waiter_last_name,phone_number,shift,hiredate,salary,annual_holiday,experience,manager_id) VALUES();
+INSERT INTO waiter(waiter_id,waiter_first_name,waiter_middle_name,waiter_last_name,phone_number,shift,hiredate,salary,annual_holiday,experience,manager_id) VALUES();
+INSERT INTO waiter(waiter_id,waiter_first_name,waiter_middle_name,waiter_last_name,phone_number,shift,hiredate,salary,annual_holiday,experience,manager_id) VALUES();
+INSERT INTO waiter(waiter_id,waiter_first_name,waiter_middle_name,waiter_last_name,phone_number,shift,hiredate,salary,annual_holiday,experience,manager_id) VALUES();
+INSERT INTO waiter(waiter_id,waiter_first_name,waiter_middle_name,waiter_last_name,phone_number,shift,hiredate,salary,annual_holiday,experience,manager_id) VALUES();
+INSERT INTO waiter(waiter_id,waiter_first_name,waiter_middle_name,waiter_last_name,phone_number,shift,hiredate,salary,annual_holiday,experience,manager_id) VALUES();
+INSERT INTO waiter(waiter_id,waiter_first_name,waiter_middle_name,waiter_last_name,phone_number,shift,hiredate,salary,annual_holiday,experience,manager_id) VALUES();
+INSERT INTO waiter(waiter_id,waiter_first_name,waiter_middle_name,waiter_last_name,phone_number,shift,hiredate,salary,annual_holiday,experience,manager_id) VALUES();
+INSERT INTO waiter(waiter_id,waiter_first_name,waiter_middle_name,waiter_last_name,phone_number,shift,hiredate,salary,annual_holiday,experience,manager_id) VALUES();
+
+
+CREATE TABLE cashier(
+    cashier_id NUMBER(4) NOT NULL,
+    cashier_first_name VARCHAR2(50) NOT NULL,
+    cashier_middle_name VARCHAR2(50),
+    cashier_last_name VARCHAR2(50) NOT NULL,
+    cash_no NUMBER NOT NULL,
+    phone_number NUMBER(10) NOT NULL,
+    shift VARCHAR2(30),
+    salary NUMBER NOT NULL,
+    hiredate DATE,
+    annual_holiday NUMBER NOT NULL,
+    experience NUMBER,
+    manager_id NUMBER(4),
+    
+    PRIMARY KEY (cashier_id),
+    FOREIGN KEY manager_id REFERENCES manager(manager_id)
+);
+
+INSERT INTO cashier(cashier_id,cashier_first_name,cashier_middle_name,cashier_last_name,cash_no,phone_number,shift,salary,hiredate,annual_holiday,experience,manager_id) VALUES();
+INSERT INTO cashier(cashier_id,cashier_first_name,cashier_middle_name,cashier_last_name,cash_no,phone_number,shift,salary,hiredate,annual_holiday,experience,manager_id) VALUES();
+INSERT INTO cashier(cashier_id,cashier_first_name,cashier_middle_name,cashier_last_name,cash_no,phone_number,shift,salary,hiredate,annual_holiday,experience,manager_id) VALUES();
+INSERT INTO cashier(cashier_id,cashier_first_name,cashier_middle_name,cashier_last_name,cash_no,phone_number,shift,salary,hiredate,annual_holiday,experience,manager_id) VALUES();
+INSERT INTO cashier(cashier_id,cashier_first_name,cashier_middle_name,cashier_last_name,cash_no,phone_number,shift,salary,hiredate,annual_holiday,experience,manager_id) VALUES();
+INSERT INTO cashier(cashier_id,cashier_first_name,cashier_middle_name,cashier_last_name,cash_no,phone_number,shift,salary,hiredate,annual_holiday,experience,manager_id) VALUES();
+INSERT INTO cashier(cashier_id,cashier_first_name,cashier_middle_name,cashier_last_name,cash_no,phone_number,shift,salary,hiredate,annual_holiday,experience,manager_id) VALUES();
+INSERT INTO cashier(cashier_id,cashier_first_name,cashier_middle_name,cashier_last_name,cash_no,phone_number,shift,salary,hiredate,annual_holiday,experience,manager_id) VALUES();
+INSERT INTO cashier(cashier_id,cashier_first_name,cashier_middle_name,cashier_last_name,cash_no,phone_number,shift,salary,hiredate,annual_holiday,experience,manager_id) VALUES();
+INSERT INTO cashier(cashier_id,cashier_first_name,cashier_middle_name,cashier_last_name,cash_no,phone_number,shift,salary,hiredate,annual_holiday,experience,manager_id) VALUES();
+INSERT INTO cashier(cashier_id,cashier_first_name,cashier_middle_name,cashier_last_name,cash_no,phone_number,shift,salary,hiredate,annual_holiday,experience,manager_id) VALUES();
+INSERT INTO cashier(cashier_id,cashier_first_name,cashier_middle_name,cashier_last_name,cash_no,phone_number,shift,salary,hiredate,annual_holiday,experience,manager_id) VALUES();
+INSERT INTO cashier(cashier_id,cashier_first_name,cashier_middle_name,cashier_last_name,cash_no,phone_number,shift,salary,hiredate,annual_holiday,experience,manager_id) VALUES();
+INSERT INTO cashier(cashier_id,cashier_first_name,cashier_middle_name,cashier_last_name,cash_no,phone_number,shift,salary,hiredate,annual_holiday,experience,manager_id) VALUES();
+INSERT INTO cashier(cashier_id,cashier_first_name,cashier_middle_name,cashier_last_name,cash_no,phone_number,shift,salary,hiredate,annual_holiday,experience,manager_id) VALUES();
+INSERT INTO cashier(cashier_id,cashier_first_name,cashier_middle_name,cashier_last_name,cash_no,phone_number,shift,salary,hiredate,annual_holiday,experience,manager_id) VALUES();
+INSERT INTO cashier(cashier_id,cashier_first_name,cashier_middle_name,cashier_last_name,cash_no,phone_number,shift,salary,hiredate,annual_holiday,experience,manager_id) VALUES();
+INSERT INTO cashier(cashier_id,cashier_first_name,cashier_middle_name,cashier_last_name,cash_no,phone_number,shift,salary,hiredate,annual_holiday,experience,manager_id) VALUES();
+INSERT INTO cashier(cashier_id,cashier_first_name,cashier_middle_name,cashier_last_name,cash_no,phone_number,shift,salary,hiredate,annual_holiday,experience,manager_id) VALUES();
+INSERT INTO cashier(cashier_id,cashier_first_name,cashier_middle_name,cashier_last_name,cash_no,phone_number,shift,salary,hiredate,annual_holiday,experience,manager_id) VALUES();
+
+CREATE TABLE courier(
+    courier_id NUMBER(4) NOT NULL,
+    courier_first_name VARCHAR2(50) NOT NULL,
+    courier_middle_name VARCHAR2(50),
+    courier_last_name VARCHAR2(50) NOT NULL,
+    phone_number NUMBER(10),
+    shift VARCHAR2(30),
+    hiredate DATE,
+    salary NUMBER NOT NULL,
+    annual_holiday NUMBER NOT NULL,
+    experience NUMBER,
+    manager_id NUMBER(4),
+    
+    PRIMARY KEY (courier_id),
+    FOREIGN KEY (manager_id) REFERENCES manager(manager_id)
+);
+
+INSERT INTO courier(courier_id,courier_first_name,courier_middle_name,courier_last_name,phone_number,shift,hiredate,salary,annual_holiday,experience,manager_id) VALUES();
+INSERT INTO courier(courier_id,courier_first_name,courier_middle_name,courier_last_name,phone_number,shift,hiredate,salary,annual_holiday,experience,manager_id) VALUES();
+INSERT INTO courier(courier_id,courier_first_name,courier_middle_name,courier_last_name,phone_number,shift,hiredate,salary,annual_holiday,experience,manager_id) VALUES();
+INSERT INTO courier(courier_id,courier_first_name,courier_middle_name,courier_last_name,phone_number,shift,hiredate,salary,annual_holiday,experience,manager_id) VALUES();
+INSERT INTO courier(courier_id,courier_first_name,courier_middle_name,courier_last_name,phone_number,shift,hiredate,salary,annual_holiday,experience,manager_id) VALUES();
+INSERT INTO courier(courier_id,courier_first_name,courier_middle_name,courier_last_name,phone_number,shift,hiredate,salary,annual_holiday,experience,manager_id) VALUES();
+INSERT INTO courier(courier_id,courier_first_name,courier_middle_name,courier_last_name,phone_number,shift,hiredate,salary,annual_holiday,experience,manager_id) VALUES();
+INSERT INTO courier(courier_id,courier_first_name,courier_middle_name,courier_last_name,phone_number,shift,hiredate,salary,annual_holiday,experience,manager_id) VALUES();
+INSERT INTO courier(courier_id,courier_first_name,courier_middle_name,courier_last_name,phone_number,shift,hiredate,salary,annual_holiday,experience,manager_id) VALUES();
+INSERT INTO courier(courier_id,courier_first_name,courier_middle_name,courier_last_name,phone_number,shift,hiredate,salary,annual_holiday,experience,manager_id) VALUES();
+INSERT INTO courier(courier_id,courier_first_name,courier_middle_name,courier_last_name,phone_number,shift,hiredate,salary,annual_holiday,experience,manager_id) VALUES();
+INSERT INTO courier(courier_id,courier_first_name,courier_middle_name,courier_last_name,phone_number,shift,hiredate,salary,annual_holiday,experience,manager_id) VALUES();
+INSERT INTO courier(courier_id,courier_first_name,courier_middle_name,courier_last_name,phone_number,shift,hiredate,salary,annual_holiday,experience,manager_id) VALUES();
+INSERT INTO courier(courier_id,courier_first_name,courier_middle_name,courier_last_name,phone_number,shift,hiredate,salary,annual_holiday,experience,manager_id) VALUES();
+INSERT INTO courier(courier_id,courier_first_name,courier_middle_name,courier_last_name,phone_number,shift,hiredate,salary,annual_holiday,experience,manager_id) VALUES();
+INSERT INTO courier(courier_id,courier_first_name,courier_middle_name,courier_last_name,phone_number,shift,hiredate,salary,annual_holiday,experience,manager_id) VALUES();
+INSERT INTO courier(courier_id,courier_first_name,courier_middle_name,courier_last_name,phone_number,shift,hiredate,salary,annual_holiday,experience,manager_id) VALUES();
+INSERT INTO courier(courier_id,courier_first_name,courier_middle_name,courier_last_name,phone_number,shift,hiredate,salary,annual_holiday,experience,manager_id) VALUES();
+INSERT INTO courier(courier_id,courier_first_name,courier_middle_name,courier_last_name,phone_number,shift,hiredate,salary,annual_holiday,experience,manager_id) VALUES();
+INSERT INTO courier(courier_id,courier_first_name,courier_middle_name,courier_last_name,phone_number,shift,hiredate,salary,annual_holiday,experience,manager_id) VALUES();
+
+
+
+CREATE TABLE dining_table(
+    table_no NUMBER NOT NULL,
+    table_capacity NUMBER NOT NULL,
+    status VARCHAR2(50),
+    place VARCHAR2(50),
+    
+    PRIMARY KEY (table_no)
+);
+
+INSERT INTO dining_table(table_no,table_capacity,status,place) VALUES(1,);
+INSERT INTO dining_table(table_no,table_capacity,status,place) VALUES(2,);
+INSERT INTO dining_table(table_no,table_capacity,status,place) VALUES(3,);
+INSERT INTO dining_table(table_no,table_capacity,status,place) VALUES(4,);
+INSERT INTO dining_table(table_no,table_capacity,status,place) VALUES(5,);
+INSERT INTO dining_table(table_no,table_capacity,status,place) VALUES(6,);
+INSERT INTO dining_table(table_no,table_capacity,status,place) VALUES(7,);
+INSERT INTO dining_table(table_no,table_capacity,status,place) VALUES(8,);
+INSERT INTO dining_table(table_no,table_capacity,status,place) VALUES(9,);
+INSERT INTO dining_table(table_no,table_capacity,status,place) VALUES(10,);
+INSERT INTO dining_table(table_no,table_capacity,status,place) VALUES(11,);
+INSERT INTO dining_table(table_no,table_capacity,status,place) VALUES(12,);
+INSERT INTO dining_table(table_no,table_capacity,status,place) VALUES(13,);
+INSERT INTO dining_table(table_no,table_capacity,status,place) VALUES(14,);
+INSERT INTO dining_table(table_no,table_capacity,status,place) VALUES(15,);
+INSERT INTO dining_table(table_no,table_capacity,status,place) VALUES(16,);
+INSERT INTO dining_table(table_no,table_capacity,status,place) VALUES(17,);
+INSERT INTO dining_table(table_no,table_capacity,status,place) VALUES(18,);
+INSERT INTO dining_table(table_no,table_capacity,status,place) VALUES(19,);
+INSERT INTO dining_table(table_no,table_capacity,status,place) VALUES(20,);
+
+CREATE TABLE customer(
+    customer_id NUMBER(4) NOT NULL,
+    customer_first_name VARCHAR2(50) NOT NULL,
+    customer_middle_name VARCHAR2(50),
+    customer_last_name VARCHAR2(50) NOT NULL,
+    phone_number NUMBER(10) NOT NULL,
+    address VARCHAR2(150),
+    
+    PRIMARY KEY (customer_id)
+);
+
+INSERT INTO customer(customer_id,customer_first_name,customer_middle_name,customer_last_name,phone_number,address) VALUES();
+INSERT INTO customer(customer_id,customer_first_name,customer_middle_name,customer_last_name,phone_number,address) VALUES();
+INSERT INTO customer(customer_id,customer_first_name,customer_middle_name,customer_last_name,phone_number,address) VALUES();
+INSERT INTO customer(customer_id,customer_first_name,customer_middle_name,customer_last_name,phone_number,address) VALUES();
+INSERT INTO customer(customer_id,customer_first_name,customer_middle_name,customer_last_name,phone_number,address) VALUES();
+INSERT INTO customer(customer_id,customer_first_name,customer_middle_name,customer_last_name,phone_number,address) VALUES();
+INSERT INTO customer(customer_id,customer_first_name,customer_middle_name,customer_last_name,phone_number,address) VALUES();
+INSERT INTO customer(customer_id,customer_first_name,customer_middle_name,customer_last_name,phone_number,address) VALUES();
+INSERT INTO customer(customer_id,customer_first_name,customer_middle_name,customer_last_name,phone_number,address) VALUES();
+INSERT INTO customer(customer_id,customer_first_name,customer_middle_name,customer_last_name,phone_number,address) VALUES();
+INSERT INTO customer(customer_id,customer_first_name,customer_middle_name,customer_last_name,phone_number,address) VALUES();
+INSERT INTO customer(customer_id,customer_first_name,customer_middle_name,customer_last_name,phone_number,address) VALUES();
+INSERT INTO customer(customer_id,customer_first_name,customer_middle_name,customer_last_name,phone_number,address) VALUES();
+INSERT INTO customer(customer_id,customer_first_name,customer_middle_name,customer_last_name,phone_number,address) VALUES();
+INSERT INTO customer(customer_id,customer_first_name,customer_middle_name,customer_last_name,phone_number,address) VALUES();
+INSERT INTO customer(customer_id,customer_first_name,customer_middle_name,customer_last_name,phone_number,address) VALUES();
+INSERT INTO customer(customer_id,customer_first_name,customer_middle_name,customer_last_name,phone_number,address) VALUES();
+INSERT INTO customer(customer_id,customer_first_name,customer_middle_name,customer_last_name,phone_number,address) VALUES();
+INSERT INTO customer(customer_id,customer_first_name,customer_middle_name,customer_last_name,phone_number,address) VALUES();
+INSERT INTO customer(customer_id,customer_first_name,customer_middle_name,customer_last_name,phone_number,address) VALUES();
+
+CREATE TABLE reservation(
+    table_no NUMBER NOT NULL,
+    customer_id NUMBER(4) NOT NULL,
+    reservation_date TIMESTAMP NOT NULL,
+    people_number NUMBER NOT NULL,
+    
+    PRIMARY KEY (table_no),
+    FOREIGN KEY (customer_id) REFERENCES customer(customer_id)
+);
+
+INSERT INTO reservation(table_no,customer_id,reservation_date,people_number) VALUES();
+INSERT INTO reservation(table_no,customer_id,reservation_date,people_number) VALUES();
+INSERT INTO reservation(table_no,customer_id,reservation_date,people_number) VALUES();
+INSERT INTO reservation(table_no,customer_id,reservation_date,people_number) VALUES();
+INSERT INTO reservation(table_no,customer_id,reservation_date,people_number) VALUES();
+INSERT INTO reservation(table_no,customer_id,reservation_date,people_number) VALUES();
+INSERT INTO reservation(table_no,customer_id,reservation_date,people_number) VALUES();
+INSERT INTO reservation(table_no,customer_id,reservation_date,people_number) VALUES();
+INSERT INTO reservation(table_no,customer_id,reservation_date,people_number) VALUES();
+INSERT INTO reservation(table_no,customer_id,reservation_date,people_number) VALUES();
+INSERT INTO reservation(table_no,customer_id,reservation_date,people_number) VALUES();
+INSERT INTO reservation(table_no,customer_id,reservation_date,people_number) VALUES();
+INSERT INTO reservation(table_no,customer_id,reservation_date,people_number) VALUES();
+INSERT INTO reservation(table_no,customer_id,reservation_date,people_number) VALUES();
+INSERT INTO reservation(table_no,customer_id,reservation_date,people_number) VALUES();
+INSERT INTO reservation(table_no,customer_id,reservation_date,people_number) VALUES();
+INSERT INTO reservation(table_no,customer_id,reservation_date,people_number) VALUES();
+INSERT INTO reservation(table_no,customer_id,reservation_date,people_number) VALUES();
+INSERT INTO reservation(table_no,customer_id,reservation_date,people_number) VALUES();
+INSERT INTO reservation(table_no,customer_id,reservation_date,people_number) VALUES();
+
+CREATE TABLE orders(
+    order_id NUMBER(4) NOT NULL,
+    order_date TIMESTAMP,
+    status VARCHAR2(10),
+    order_type VARCHAR2(15) NOT NULL
+    table_no NUMBER,
+    waiter_id NUMBER,
+    courier_id NUMBER,
+    
+    PRIMARY KEY (order_id),
+    FOREIGN KEY (table_no) REFERENCES dining_table(table_no),
+    FOREIGN KEY (waiter_id) REFERENCES waiter(waiter_id),
+    FOREIGN KEY (courier_id) REFERENCES courier(courier_id)
+);
+
+INSERT INTO orders(order_id,order_date,status,order_type,table_no,waiter_id,courier_id) VALUES();
+INSERT INTO orders(order_id,order_date,status,order_type,table_no,waiter_id,courier_id) VALUES();
+INSERT INTO orders(order_id,order_date,status,order_type,table_no,waiter_id,courier_id) VALUES();
+INSERT INTO orders(order_id,order_date,status,order_type,table_no,waiter_id,courier_id) VALUES();
+INSERT INTO orders(order_id,order_date,status,order_type,table_no,waiter_id,courier_id) VALUES();
+INSERT INTO orders(order_id,order_date,status,order_type,table_no,waiter_id,courier_id) VALUES();
+INSERT INTO orders(order_id,order_date,status,order_type,table_no,waiter_id,courier_id) VALUES();
+INSERT INTO orders(order_id,order_date,status,order_type,table_no,waiter_id,courier_id) VALUES();
+INSERT INTO orders(order_id,order_date,status,order_type,table_no,waiter_id,courier_id) VALUES();
+INSERT INTO orders(order_id,order_date,status,order_type,table_no,waiter_id,courier_id) VALUES();
+INSERT INTO orders(order_id,order_date,status,order_type,table_no,waiter_id,courier_id) VALUES();
+INSERT INTO orders(order_id,order_date,status,order_type,table_no,waiter_id,courier_id) VALUES();
+INSERT INTO orders(order_id,order_date,status,order_type,table_no,waiter_id,courier_id) VALUES();
+INSERT INTO orders(order_id,order_date,status,order_type,table_no,waiter_id,courier_id) VALUES();
+INSERT INTO orders(order_id,order_date,status,order_type,table_no,waiter_id,courier_id) VALUES();
+INSERT INTO orders(order_id,order_date,status,order_type,table_no,waiter_id,courier_id) VALUES();
+INSERT INTO orders(order_id,order_date,status,order_type,table_no,waiter_id,courier_id) VALUES();
+INSERT INTO orders(order_id,order_date,status,order_type,table_no,waiter_id,courier_id) VALUES();
+INSERT INTO orders(order_id,order_date,status,order_type,table_no,waiter_id,courier_id) VALUES();
+INSERT INTO orders(order_id,order_date,status,order_type,table_no,waiter_id,courier_id) VALUES();
+
+CREATE TABLE order_item(
+    order_id NUMBER(4)
+    item_name VARCHAR2(50) NOT NULL,
+    item_price NUMBER NOT NULL,
+    item_quantity NUMBER NOT NULL,
+    item_type VARCHAR2(15) NOT NULL,
+    item_desc VARCHAR2(50),
+    special_option VARCHAR2(50),
+    calories NUMBER,
+
+    PRIMARY KEY (order_id,item_name)
+);
+
+INSERT INTO order_item(item_name,item_price,item_quantity,item_type,item_desc,special_option,calories) VALUES();
+INSERT INTO order_item(item_name,item_price,item_quantity,item_type,item_desc,special_option,calories) VALUES();
+INSERT INTO order_item(item_name,item_price,item_quantity,item_type,item_desc,special_option,calories) VALUES();
+INSERT INTO order_item(item_name,item_price,item_quantity,item_type,item_desc,special_option,calories) VALUES();
+INSERT INTO order_item(item_name,item_price,item_quantity,item_type,item_desc,special_option,calories) VALUES();
+INSERT INTO order_item(item_name,item_price,item_quantity,item_type,item_desc,special_option,calories) VALUES();
+INSERT INTO order_item(item_name,item_price,item_quantity,item_type,item_desc,special_option,calories) VALUES();
+INSERT INTO order_item(item_name,item_price,item_quantity,item_type,item_desc,special_option,calories) VALUES();
+INSERT INTO order_item(item_name,item_price,item_quantity,item_type,item_desc,special_option,calories) VALUES();
+INSERT INTO order_item(item_name,item_price,item_quantity,item_type,item_desc,special_option,calories) VALUES();
+INSERT INTO order_item(item_name,item_price,item_quantity,item_type,item_desc,special_option,calories) VALUES();
+INSERT INTO order_item(item_name,item_price,item_quantity,item_type,item_desc,special_option,calories) VALUES();
+INSERT INTO order_item(item_name,item_price,item_quantity,item_type,item_desc,special_option,calories) VALUES();
+INSERT INTO order_item(item_name,item_price,item_quantity,item_type,item_desc,special_option,calories) VALUES();
+INSERT INTO order_item(item_name,item_price,item_quantity,item_type,item_desc,special_option,calories) VALUES();
+INSERT INTO order_item(item_name,item_price,item_quantity,item_type,item_desc,special_option,calories) VALUES();
+INSERT INTO order_item(item_name,item_price,item_quantity,item_type,item_desc,special_option,calories) VALUES();
+INSERT INTO order_item(item_name,item_price,item_quantity,item_type,item_desc,special_option,calories) VALUES();
+INSERT INTO order_item(item_name,item_price,item_quantity,item_type,item_desc,special_option,calories) VALUES();
+INSERT INTO order_item(item_name,item_price,item_quantity,item_type,item_desc,special_option,calories) VALUES();
+
+
+CREATE TABLE prepared_by(
+    chef_id NUMBER(4) NOT NULL,
+    order_id NUMBER(4) NOT NULL,
+    
+    PRIMARY KEY (chef_id,order_id)
+);
+
+INSERT INTO prepared_by(chef_id,order_id) VALUES();
+INSERT INTO prepared_by(chef_id,order_id) VALUES();
+INSERT INTO prepared_by(chef_id,order_id) VALUES();
+INSERT INTO prepared_by(chef_id,order_id) VALUES();
+INSERT INTO prepared_by(chef_id,order_id) VALUES();
+INSERT INTO prepared_by(chef_id,order_id) VALUES();
+INSERT INTO prepared_by(chef_id,order_id) VALUES();
+INSERT INTO prepared_by(chef_id,order_id) VALUES();
+INSERT INTO prepared_by(chef_id,order_id) VALUES();
+INSERT INTO prepared_by(chef_id,order_id) VALUES();
+INSERT INTO prepared_by(chef_id,order_id) VALUES();
+INSERT INTO prepared_by(chef_id,order_id) VALUES();
+INSERT INTO prepared_by(chef_id,order_id) VALUES();
+INSERT INTO prepared_by(chef_id,order_id) VALUES();
+INSERT INTO prepared_by(chef_id,order_id) VALUES();
+INSERT INTO prepared_by(chef_id,order_id) VALUES();
+INSERT INTO prepared_by(chef_id,order_id) VALUES();
+INSERT INTO prepared_by(chef_id,order_id) VALUES();
+INSERT INTO prepared_by(chef_id,order_id) VALUES();
+INSERT INTO prepared_by(chef_id,order_id) VALUES();
+
+CREATE TABLE delivers(
+    customer_id NUMBER(4),
+    order_id NUMBER(4),
+    courier_id NUMBER(4),
+    delivery_way VARCHAR2(20),
+    
+    PRIMARY KEY (customer_id,order_id),
+    FOREIGN KEY (courier_id) REFERENCES courier(courier_id) 
+);
+
+INSERT INTO delivers(customer_id,order_id,courier_id,delivery_way) VALUES();
+INSERT INTO delivers(customer_id,order_id,courier_id,delivery_way) VALUES();
+INSERT INTO delivers(customer_id,order_id,courier_id,delivery_way) VALUES();
+INSERT INTO delivers(customer_id,order_id,courier_id,delivery_way) VALUES();
+INSERT INTO delivers(customer_id,order_id,courier_id,delivery_way) VALUES();
+INSERT INTO delivers(customer_id,order_id,courier_id,delivery_way) VALUES();
+INSERT INTO delivers(customer_id,order_id,courier_id,delivery_way) VALUES();
+INSERT INTO delivers(customer_id,order_id,courier_id,delivery_way) VALUES();
+INSERT INTO delivers(customer_id,order_id,courier_id,delivery_way) VALUES();
+INSERT INTO delivers(customer_id,order_id,courier_id,delivery_way) VALUES();
+INSERT INTO delivers(customer_id,order_id,courier_id,delivery_way) VALUES();
+INSERT INTO delivers(customer_id,order_id,courier_id,delivery_way) VALUES();
+INSERT INTO delivers(customer_id,order_id,courier_id,delivery_way) VALUES();
+INSERT INTO delivers(customer_id,order_id,courier_id,delivery_way) VALUES();
+INSERT INTO delivers(customer_id,order_id,courier_id,delivery_way) VALUES();
+INSERT INTO delivers(customer_id,order_id,courier_id,delivery_way) VALUES();
+INSERT INTO delivers(customer_id,order_id,courier_id,delivery_way) VALUES();
+INSERT INTO delivers(customer_id,order_id,courier_id,delivery_way) VALUES();
+INSERT INTO delivers(customer_id,order_id,courier_id,delivery_way) VALUES();
+INSERT INTO delivers(customer_id,order_id,courier_id,delivery_way) VALUES();
+
+CREATE TABLE bill(
+    bill_id NUMBER(4) NOT NULL,
+    bill_price NUMBER NOT NULL,
+    tip_amt NUMBER,
+    bill_date TIMESTAMP NOT NULL,
+    order_id NUMBER,
+    cashier_id NUMBER,
+    courier_id NUMBER,
+    payment_way VARCHAR2(20),
+    
+    PRIMARY KEY (bill_id),
+    FOREIGN KEY (order_id) REFERENCES orders(order_id),
+    FOREIGN KEY (cashier_id) REFERENCES cashier(cashier_id),
+    FOREIGN KEY (courier_id) REFERENCES courier(courier_id)
+);
+
+INSERT INTO bill(bill_id,bill_price,tip_amt,bill_date,order_id,cashier_id,courier_id,payment_way) VALUES();
+INSERT INTO bill(bill_id,bill_price,tip_amt,bill_date,order_id,cashier_id,courier_id,payment_way) VALUES();
+INSERT INTO bill(bill_id,bill_price,tip_amt,bill_date,order_id,cashier_id,courier_id,payment_way) VALUES();
+INSERT INTO bill(bill_id,bill_price,tip_amt,bill_date,order_id,cashier_id,courier_id,payment_way) VALUES();
+INSERT INTO bill(bill_id,bill_price,tip_amt,bill_date,order_id,cashier_id,courier_id,payment_way) VALUES();
+INSERT INTO bill(bill_id,bill_price,tip_amt,bill_date,order_id,cashier_id,courier_id,payment_way) VALUES();
+INSERT INTO bill(bill_id,bill_price,tip_amt,bill_date,order_id,cashier_id,courier_id,payment_way) VALUES();
+INSERT INTO bill(bill_id,bill_price,tip_amt,bill_date,order_id,cashier_id,courier_id,payment_way) VALUES();
+INSERT INTO bill(bill_id,bill_price,tip_amt,bill_date,order_id,cashier_id,courier_id,payment_way) VALUES();
+INSERT INTO bill(bill_id,bill_price,tip_amt,bill_date,order_id,cashier_id,courier_id,payment_way) VALUES();
+INSERT INTO bill(bill_id,bill_price,tip_amt,bill_date,order_id,cashier_id,courier_id,payment_way) VALUES();
+INSERT INTO bill(bill_id,bill_price,tip_amt,bill_date,order_id,cashier_id,courier_id,payment_way) VALUES();
+INSERT INTO bill(bill_id,bill_price,tip_amt,bill_date,order_id,cashier_id,courier_id,payment_way) VALUES();
+INSERT INTO bill(bill_id,bill_price,tip_amt,bill_date,order_id,cashier_id,courier_id,payment_way) VALUES();
+INSERT INTO bill(bill_id,bill_price,tip_amt,bill_date,order_id,cashier_id,courier_id,payment_way) VALUES();
+INSERT INTO bill(bill_id,bill_price,tip_amt,bill_date,order_id,cashier_id,courier_id,payment_way) VALUES();
+INSERT INTO bill(bill_id,bill_price,tip_amt,bill_date,order_id,cashier_id,courier_id,payment_way) VALUES();
+INSERT INTO bill(bill_id,bill_price,tip_amt,bill_date,order_id,cashier_id,courier_id,payment_way) VALUES();
+INSERT INTO bill(bill_id,bill_price,tip_amt,bill_date,order_id,cashier_id,courier_id,payment_way) VALUES();
+INSERT INTO bill(bill_id,bill_price,tip_amt,bill_date,order_id,cashier_id,courier_id,payment_way) VALUES();
+
+CREATE TABLE food_supplier(
+    supplier_id NUMBER(4) NOT NULL,
+    supplier_name VARCHAR2(50) NOT NULL,
+    product_type VARCHAR2(15) NOT NULL,
+    contact_info VARCHAR2(100) NOT NULL,
+    supply_type VARCHAR2(50) NOT NULL
+    
+    PRIMARY KEY (supplier_id)
+);
+
+INSERT INTO food_supplier(supplier_id,supplier_name,product_type,contact_info,supply_type) VALUES();
+INSERT INTO food_supplier(supplier_id,supplier_name,product_type,contact_info,supply_type) VALUES();
+INSERT INTO food_supplier(supplier_id,supplier_name,product_type,contact_info,supply_type) VALUES();
+INSERT INTO food_supplier(supplier_id,supplier_name,product_type,contact_info,supply_type) VALUES();
+INSERT INTO food_supplier(supplier_id,supplier_name,product_type,contact_info,supply_type) VALUES();
+INSERT INTO food_supplier(supplier_id,supplier_name,product_type,contact_info,supply_type) VALUES();
+INSERT INTO food_supplier(supplier_id,supplier_name,product_type,contact_info,supply_type) VALUES();
+INSERT INTO food_supplier(supplier_id,supplier_name,product_type,contact_info,supply_type) VALUES();
+INSERT INTO food_supplier(supplier_id,supplier_name,product_type,contact_info,supply_type) VALUES();
+INSERT INTO food_supplier(supplier_id,supplier_name,product_type,contact_info,supply_type) VALUES();
+INSERT INTO food_supplier(supplier_id,supplier_name,product_type,contact_info,supply_type) VALUES();
+INSERT INTO food_supplier(supplier_id,supplier_name,product_type,contact_info,supply_type) VALUES();
+INSERT INTO food_supplier(supplier_id,supplier_name,product_type,contact_info,supply_type) VALUES();
+INSERT INTO food_supplier(supplier_id,supplier_name,product_type,contact_info,supply_type) VALUES();
+INSERT INTO food_supplier(supplier_id,supplier_name,product_type,contact_info,supply_type) VALUES();
+INSERT INTO food_supplier(supplier_id,supplier_name,product_type,contact_info,supply_type) VALUES();
+INSERT INTO food_supplier(supplier_id,supplier_name,product_type,contact_info,supply_type) VALUES();
+INSERT INTO food_supplier(supplier_id,supplier_name,product_type,contact_info,supply_type) VALUES();
+INSERT INTO food_supplier(supplier_id,supplier_name,product_type,contact_info,supply_type) VALUES();
+INSERT INTO food_supplier(supplier_id,supplier_name,product_type,contact_info,supply_type) VALUES();
+
+CREATE TABLE trades(
+    supplier_id NUMBER(4),
+    manager_id NUMBER(4),
+    product_name VARCHAR2(50) NOT NULL,
+    quantity NUMBER NOT NULL,
+    
+    PRIMARY KEY (supplier_id),
+    FOREIGN KEY (manager_id) REFERENCES manager(manager_id)
+);
+
+INSERT INTO trades(supplier_id,manager_id,product_name,quantity) VALUES();
+INSERT INTO trades(supplier_id,manager_id,product_name,quantity) VALUES();
+INSERT INTO trades(supplier_id,manager_id,product_name,quantity) VALUES();
+INSERT INTO trades(supplier_id,manager_id,product_name,quantity) VALUES();
+INSERT INTO trades(supplier_id,manager_id,product_name,quantity) VALUES();
+INSERT INTO trades(supplier_id,manager_id,product_name,quantity) VALUES();
+INSERT INTO trades(supplier_id,manager_id,product_name,quantity) VALUES();
+INSERT INTO trades(supplier_id,manager_id,product_name,quantity) VALUES();
+INSERT INTO trades(supplier_id,manager_id,product_name,quantity) VALUES();
+INSERT INTO trades(supplier_id,manager_id,product_name,quantity) VALUES();
+INSERT INTO trades(supplier_id,manager_id,product_name,quantity) VALUES();
+INSERT INTO trades(supplier_id,manager_id,product_name,quantity) VALUES();
+INSERT INTO trades(supplier_id,manager_id,product_name,quantity) VALUES();
+INSERT INTO trades(supplier_id,manager_id,product_name,quantity) VALUES();
+INSERT INTO trades(supplier_id,manager_id,product_name,quantity) VALUES();
+INSERT INTO trades(supplier_id,manager_id,product_name,quantity) VALUES();
+INSERT INTO trades(supplier_id,manager_id,product_name,quantity) VALUES();
+INSERT INTO trades(supplier_id,manager_id,product_name,quantity) VALUES();
+INSERT INTO trades(supplier_id,manager_id,product_name,quantity) VALUES();
+INSERT INTO trades(supplier_id,manager_id,product_name,quantity) VALUES();
+INSERT INTO trades(supplier_id,manager_id,product_name,quantity) VALUES();
